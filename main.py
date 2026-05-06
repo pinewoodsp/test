@@ -1,8 +1,12 @@
-from http.server import HTTPServer, SimpleHTTPRequestHandler
-import os
+import streamlit as st
 
-os.chdir(os.path.dirname(os.path.abspath(__file__)))
+st.set_page_config(
+    page_title="동작·관악구 역사적 명소 리플렛",
+    page_icon="🗺️",
+    layout="wide"
+)
 
-port = 8080
-print(f"서버가 시작되었습니다: http://localhost:{port}")
-HTTPServer(("0.0.0.0", port), SimpleHTTPRequestHandler).serve_forever()
+with open("index.html", "r", encoding="utf-8") as f:
+    html_code = f.read()
+
+st.components.v1.html(html_code, height=900, scrolling=True)
