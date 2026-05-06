@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>동작 관악구 역사적 명소 - 3단 리플렛</title>
     <style>
         * {
             margin: 0;
@@ -263,7 +262,6 @@
             background: rgba(255, 255, 255, 0.05);
             border-radius: 16px;
             border: 1px solid rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
         }
 
         .panel-info h3 {
@@ -310,42 +308,6 @@
             font-size: 13px;
             color: #aaa;
         }
-
-        @media (max-width: 768px) {
-            .scene {
-                width: 500px;
-                height: 350px;
-                perspective: 1200px;
-            }
-            .panel {
-                width: 160px;
-                height: 260px;
-            }
-            .panel-center { left: 160px; }
-            .panel-right { left: 160px; }
-            .panel-number { font-size: 60px; }
-            .info-grid { grid-template-columns: 1fr; }
-            .controls h2 { font-size: 22px; }
-        }
-
-        @media (max-width: 520px) {
-            .scene {
-                width: 360px;
-                height: 300px;
-                perspective: 1000px;
-            }
-            .panel {
-                width: 115px;
-                height: 220px;
-            }
-            .panel-center { left: 115px; }
-            .panel-right { left: 115px; }
-            .panel-number { font-size: 45px; }
-            .button-group button {
-                padding: 8px 16px;
-                font-size: 12px;
-            }
-        }
     </style>
 </head>
 <body>
@@ -364,7 +326,7 @@
     <div class="scene-container">
         <div class="scene" id="scene">
             <div class="leaflet" id="leaflet">
-                <div class="panel panel-left" id="panel-left">
+                <div class="panel panel-left">
                     <div class="panel-face panel-front">
                         <div class="panel-content">
                             <div class="panel-number">4</div>
@@ -379,7 +341,7 @@
                     </div>
                 </div>
 
-                <div class="panel panel-center" id="panel-center">
+                <div class="panel panel-center">
                     <div class="panel-face panel-front">
                         <div class="panel-content">
                             <div class="panel-number">3</div>
@@ -393,7 +355,7 @@
                         </div>
                     </div>
 
-                    <div class="panel panel-right" id="panel-right">
+                    <div class="panel panel-right">
                         <div class="panel-face panel-front">
                             <div class="panel-content">
                                 <div class="panel-number">2</div>
